@@ -1,36 +1,49 @@
-const assert = require("assert");
+const assert = require('assert');
 
-describe("arrow functions", function() {
-  it("Shorter to write, eliminate all the fats", function() {
-    const func = () => {
-      return "I'm a return value of func()";
+describe('arrow functions', function() {
+
+  it('is an arrow function that logs whether the input is odd/even and returns the same', function() {
+    // write your function here and assign it to a variable func
+    assert.equal(func(4), 'even');
+    assert.equal(func(1235), 'odd');
+  });
+
+  it('is a function that works w/o parens', () => {
+    // write the same function but this time w/o parens around params
+    assert.equal(func(4), 'even');
+    assert.equal(func(1235), 'odd');
+  });
+
+  it('is an arrow function that returns true if the multiplication of the 2 inputs is even', () => {
+    // write your function here and assign it to func.
+    assert.equal(func(34, 23), true);
+    assert.equal(func(53, 21), false);
+  });
+
+  it('is a fn that does not have curly braces', () => {
+    // write a fn func1 that returns the input multiplied by 2 w/o curly braces
+    assert.deepEqual(func1(4), 8);
+
+    // write a fn func2 that returns an object {id: 123}
+    assert.deepEqual(func2().hasOwnProperty('id'), true);
+  });
+
+  /**
+   * code to run in console
+    window.name = "global";
+
+    var obj = {
+      name: "obj",
+
+      who1: function () {
+        console.log("this is ", this.name);
+      },
+      who2: () => {
+        console.log("this is ", this.name);
+      },
+      who3() {
+        console.log("this is ", this.name);
+      }
     };
-    assert.equal(func(), "I'm a return value of func()");
-  });
-
-  it("a single expression, without curly braces returns too is called implicit returns", function() {
-    // remove the curly braces around the function body
-    const func = () => {
-      "I return too";
-    };
-    assert.equal(func(), "I return too");
-  });
-
-  it("function with one parameter can be written without parens", () => {
-    const func = p => param - 1;
-    assert.equal(func(25), 24);
-  });
-
-  it("function many params require parens", () => {
-    const func = first => first + second;
-    assert.equal(func(23, 42), 23 + 42);
-  });
-
-  it("function body needs a parens to return an object", () => {
-    // wrap the entire function body along with curly braces with parens
-    const func = () => {
-      iAm: "an object";
-    };
-    assert.deepEqual(func(), { iAm: "an object" });
-  });
+  */
 });
