@@ -1,0 +1,19 @@
+{
+  "name": "reactfestmumbai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "babel-core": "^6.18.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register \"./spec/**/*.js\""
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
