@@ -2,20 +2,7 @@ const assert = require("assert");
 const products = require("./products.json");
 
 describe("map is a transformation function", () => {
-  it("it's a prototype method of Array", () => {
-    let arr = {};
-
-    assert.equal(typeof arr.map, "function");
-  });
-
-  it("it returns an array", () => {
-    let transformed = [2, 3, 4].map(current => current + 1);
-    transformed = "delete this assignment";
-
-    assert.equal(Array.isArray(transformed), true);
-  });
-
-  it("should double the product price due to infilation", () => {
+  it("should double the product price due to inflation", () => {
     const expected = 1998;
 
     // write the transformation function here
@@ -26,19 +13,6 @@ describe("map is a transformation function", () => {
 });
 
 describe("filter is a transformation function", () => {
-  it("it's a prototype method of Array", () => {
-    let arr = {};
-
-    assert.equal(typeof arr.filter, "function");
-  });
-
-  it("it returns an array, which is filtered based on the condition", () => {
-    let transformed = [2, 3, 4].filter(current => current % 2);
-    transformed = "delete this assignment";
-
-    assert.equal(Array.isArray(transformed), true);
-  });
-
   it("should return products which has less than 30 in stock", () => {
     // write the transformation fuction here
     let filtered;
@@ -55,12 +29,6 @@ describe("filter is a transformation function", () => {
 });
 
 describe("reduce is a transformation function", () => {
-  it("it's a prototype method of Array", () => {
-    let arr = {};
-
-    assert.equal(typeof arr.reduce, "function");
-  });
-
   it("it returns a reduced value {String, Number}", () => {
     let reduced = [2, 3, 4].reduce((acc, current) => acc + current, 0);
     reduced = "delete this assignment";
