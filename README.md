@@ -1,4 +1,4 @@
-# REACTFESTMUMBAI
+# BlitzTestCases
 
 This repo has the code exercises for ES6 material. All the code exercises and solution are in the modules directory.
 
