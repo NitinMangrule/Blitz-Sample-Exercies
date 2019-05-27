@@ -3,7 +3,6 @@ const assert = require('assert');
 describe('Array exercises', () => {
     it('should check whether an input is sourceArray', () => {
         const sourceArray = ['a', 'b', 'c', 'd'];
-        // const isArray = sourceArray instanceof Array;
         const isArray = sourceArray.constructor === Array;
         assert.strictEqual(isArray, true);
     });
@@ -91,6 +90,89 @@ describe('Array exercises', () => {
             const targetArray = ["second", "third", "fifth", "sixth", "seventh"];
             assert.deepStrictEqual(sourceArray, targetArray);
         });
+    });
+
+    it('should find k\'th smallest number in an array', () => {
+        /*
+            From the given array, it should find the kth samllest number
+            Example:
+            Input: [10, 9, 8, 3, 7, 2]; Find out the 3rd smallest number, where k = 2
+            Output: 7
+        */
+        /* Task: Find the 5th smallest number in the given array */
+        const sourceArray = [21, 432, 645, 1, 87, 546, 39, 19, 30, 106, 23];
+        const computedArray = sourceArray.sort((a, b) => a - b);
+        const smallestIndex = 5;
+        const foundElement = computedArray[smallestIndex - 1];
+        const targetElement = computedArray[smallestIndex - 1];
+
+        assert.strictEqual(foundElement, targetElement);
+    });
+
+    it('should find k\'th largest number in an array', () => {
+        /*
+            From the given array, it should find the kth samllest number
+            Example:
+            Input: [10, 9, 8, 3, 7, 2]; Find out the 3rd smallest number, where k = 2
+            Output: 7
+        */
+        /* Task: Find the 8th smallest number in the given array */
+        const sourceArray = [21, 432, 645, 1, 87, 546, 39, 19, 30, 106, 23];
+        const computedArray = sourceArray.sort((a, b) => b - a);
+        const largestIndex = 8;
+        const foundElement = computedArray[largestIndex - 1];
+        const targetElement = computedArray[largestIndex - 1];
+
+        assert.strictEqual(foundElement, targetElement);
+    });
+
+    it('should remove duplicates from a given array', () => {
+        /*
+            The output should contain have array of unique elements
+        */
+        /* Task: Remove duplicates from the given array by price */
+        const sourceArray = [
+            {
+                'name': 'abc',
+                'price': 100
+            },
+            {
+                'name': 'def',
+                'price': 200
+            },
+            {
+                'name': 'pqr',
+                'price': 400
+            },
+            {
+                'name': 'xyz',
+                'price': 100
+            },
+            {
+                'name': 'lmn',
+                'price': 200
+            },
+            {
+                'name': 'ghi',
+                'price': 300
+            },
+            {
+                'name': 'jkl',
+                'price': 200
+            },
+            {
+                'name': 'uvw',
+                'price': 100
+            },
+            {
+                'name': 'rst',
+                'price': 100
+            }
+        ];
+        const targetArray = [100, 200, 400, 300];
+        const computedArray = Array.from(new Set(sourceArray.map((arr) => arr.price)));
+
+        assert.deepStrictEqual(computedArray, targetArray);
     });
 });
 
