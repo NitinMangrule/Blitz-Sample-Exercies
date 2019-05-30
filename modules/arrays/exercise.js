@@ -141,5 +141,19 @@ describe('Array exercises', () => {
 
         assert.deepStrictEqual(computedArray, targetArray);
     });
+
+    it('fix the below snippet to allow insertion an item at the end', () => {
+        /*
+            Task:
+                The goal is to fix the error in the below snippet to allow an item to be inserted at the end.
+        */
+        const sourceObj = new Map();
+        sourceObj.set('name', 'Lorem Ipsum');
+        let computedObj = sourceObj.values();
+        computedObj.push('Brute dissentiunt');
+        // TODO: Solution or Logic goes here
+
+        assert.deepStrictEqual(computedObj, targetObj);
+    });
 });
 
