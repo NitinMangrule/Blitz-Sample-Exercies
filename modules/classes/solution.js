@@ -1,30 +1,43 @@
 const assert = require("assert");
 
-describe("class creation", () => {
-  it("is as simple as `class XXX {}`", function() {
-    class TestClass {}
+describe("Class Exercies", () => {
+  it("should define a class and verify the same", () => {
+    class TestClass { }
 
-    const instance = new TestClass();
-    assert.equal(typeof instance, "object");
+    const isClass = typeof (new TestClass());
+    const expectation = "object";
+    assert.equal(isClass, expectation);
   });
 
-  it("class is block scoped", () => {
-    class Inside {}
-    assert.equal(typeof Inside, "function");
+  it("should define a class of type Block scope", () => {
+    class Inside { }
+    const isBlockScopedClass = typeof Inside;
+    const expectation = "function";
+    assert.equal(isBlockScopedClass, expectation);
   });
 
-  it("special method is `constructor`", function() {
+  it("should define a constructor for a class having a parameter", () => {
+    /*
+      Task:
+        Define a constructor having a paramter as 'id' and assign a value to it.
+        Assign a value to it
+    */
     class User {
       constructor(id) {
         this.id = id;
       }
     }
 
-    const user = new User(42);
-    assert.equal(user.id, 42);
+    const userId = 42;
+    const instanceId = (new User(42)).id;
+    assert.equal(instanceId, userId);
   });
 
-  it("defining a method is simple", function () {
+  it("should define a method for a class", () => {
+    /*
+      Task:
+        Define a method for a class
+    */
     class SuperHero {
       canFly() {
         return false;
@@ -32,30 +45,39 @@ describe("class creation", () => {
     }
     // add a method inside the class canFly and pass the test case.
     const batman = new SuperHero();
-    assert.equal(batman.canFly(), false);
+    const canBatmanFly = batman.canFly();
+    const expectation = false;
+    assert.equal(canBatmanFly, expectation);
   });
 
-  it("anonymous class", () => {
-    const classType = typeof (() => {});
-    assert.equal(classType, "function");
+  it("should define an anonymous class", () => {
+    /*
+      Task:
+        Create an anonymous class and verify the same
+    */
+    const classType = typeof (() => { });
+    const expectation = "function";
+    assert.equal(classType, expectation);
   });
 });
 
-describe("inside a class you can use the `static` keyword", () => {
+describe("should create a method for a class that all the instances share a common copy", () => {
   describe("for methods", () => {
-    class UnitTest {}
+    class UnitTest { }
 
-    it("should have a `static` method", () => {
+    it("should have a method that is being shared among all the instances", () => {
       class TestFactory {
         static makeTest() {
           return new UnitTest();
         }
       }
 
-      assert.ok(TestFactory.makeTest() instanceof UnitTest);
+      const isStaticMethod = TestFactory.makeTest() instanceof UnitTest;
+
+      assert.ok(isStaticMethod);
     });
 
-    it("the method name can be dynamic/computed at runtime", () => {
+    it("should define a method whose name can is dynamic or gets computed at the runtime", () => {
       const methodName = "createTest";
       class TestFactory {
         static [methodName]() {
@@ -63,19 +85,22 @@ describe("inside a class you can use the `static` keyword", () => {
         }
       }
 
-      assert.ok(TestFactory.createTest() instanceof UnitTest);
+      const isRunTimeMethod = TestFactory.createTest() instanceof UnitTest;
+
+      assert.ok(isRunTimeMethod);
     });
   });
 });
 
-describe("classes can inherit from another", () => {
-  describe("the default super class is Object", () => {
-    it("B is an instance of A, B is also instance of Object", () => {
-      class A {}
-      class B extends A {}
+describe("should define a couple of classes that inherits each other", () => {
+  it("one class is an instance of other and is an object as well", () => {
+    class A { }
+    class B extends A { }
 
-      assert.equal(new B() instanceof A, true);
-      assert.equal(new B() instanceof Object, true);
-    });
+    const isInheritsFromSuper = ((new B()) instanceof A);
+    const isInheritedAnObject = ((new B()) instanceof Object);
+
+    assert.equal(isInheritsFromSuper, true);
+    assert.equal(isInheritedAnObject, true);
   });
 });
