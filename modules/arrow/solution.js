@@ -1,44 +1,74 @@
 const assert = require("assert");
 
-describe("arrow functions", function () {
-  it('is an arrow function that logs whether the input is odd/even and returns the same', function () {
-    // write your function here and assign it to a variable func
+describe("Arrow functions Exercies", () => {
+  it('should define an arrow method that logs whether the input is odd/even and returns the same', () => {
+    /*
+      Task
+          Create a method with arrow method and test the condituons both for true and false conditons.
+    */
     const func = (num) => {
       const numType = num % 2 === 0 ? 'even' : 'odd';
-      console.log(numType);
       return numType;
     }
-    assert.equal(func(4), 'even');
-    assert.equal(func(1235), 'odd');
+    const computed1 = func(4);
+    const computed2 = func(1235);
+    const expected1 = 'even';
+    const expected2 = 'odd';
+
+    assert.equal(computed1, expected1);
+    assert.equal(computed2, expected2);
   });
 
-  it('is a function that works w/o parens', () => {
-    // write the same function but this time w/o parens around params
+  it('should define an arrow method that logs whether an input is odd or even, without parenthesis', () => {
+    /*
+      Task
+          Create a method with arrow method and test the condituons both for true and false conditons.
+    */
     const func = num => {
       const numType = num % 2 === 0 ? 'even' : 'odd';
-      console.log(numType);
       return numType;
     }
-    assert.equal(func(4), 'even');
-    assert.equal(func(1235), 'odd');
+    const computed1 = func(4);
+    const computed2 = func(1235);
+    const expected1 = 'even';
+    const expected2 = 'odd';
+
+    assert.equal(computed1, expected1);
+    assert.equal(computed2, expected2);
   });
 
-  it('is an arrow function that returns true if the multiplication of the 2 inputs is even', () => {
-    // write your function here and assign it to func.
+  it('should define an arrow method that returns true if the multiplication of the 2 inputs is even', () => {
+    /*
+      Task
+          Create a method with arrow method and test the condituons both for true and false conditons.
+    */
     const func = (num1, num2) => {
       return (num1 * num2) % 2 === 0
     }
-    assert.equal(func(34, 23), true);
-    assert.equal(func(53, 21), false);
+    const computed1 = func(34, 23);
+    const computed2 = func(53, 21);
+    const expected1 = true;
+    const expected2 = false;
+
+    assert.equal(computed1, expected1);
+    assert.equal(computed2, expected2);
   });
 
-  it('is a fn with implicit return that does not have curly braces', () => {
-    // write a fn func1 that returns the input multiplied by 2 w/o curly braces
-    const func1 = num1 => num1 * 2
-    assert.deepEqual(func1(4), 8);
+  it('should define a method with implicit return, that does not have curly braces', () => {
+    /*
+      Task
+        1. Write a method that returns the input (4) multiplied by 2, without curly braces
+        2. Write a method that returns an object {id: 123}
+    */
 
-    // write a fn func2 that returns an object {id: 123}
-    const func2 = _ => ({id: 123})
-    assert.deepEqual(func2().hasOwnProperty('id'), true);
+    const func1 = num1 => num1 * 2
+    const computed1 = func1(4);
+    const expected1 = 8;
+    assert.deepEqual(computed1, expected1);
+
+    const func2 = _ => ({ id: 123 })
+    const computed2 = func2().hasOwnProperty('id');
+    const expected2 = true;
+    assert.deepEqual(computed2, expected2);
   });
 });

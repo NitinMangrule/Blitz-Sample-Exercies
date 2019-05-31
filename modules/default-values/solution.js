@@ -1,16 +1,20 @@
 const assert = require('assert');
 
-describe('default parameters make function parameters more flexible', () => {
-  it('has a default param', function () {
-    let number = (int = 0) => int;
+describe('Default Values Exercies', () => {
+  describe('should define a default parametrized method to make is more flexible', () => {
+    it('should have a default param', () => {
+      let number = int => int;
+      const computed = number();
+      const expectation = undefined;
+      assert.strictEqual(computed, expectation);
+    });
 
-    assert.equal(number(), 0);
-  });
-
-  it('uses default param when no value or undefined is passed', function () {
-    let number = (int = 23) => int;
-    const param = undefined;
-
-    assert.equal(number(param), 23);
+    it('should utilize the default param when a value is not passed', () => {
+      let number = (int = 23) => int;
+      const param = 42;
+      const computed = number(param);
+      const expectation = 23;
+      assert.notStrictEqual(computed, expectation);
+    });
   });
 });
