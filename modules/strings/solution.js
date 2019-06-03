@@ -2,9 +2,14 @@ const assert = require('assert');
 
 describe('String exercies', () => {
     it('should convert the source String into CamelCase', () => {
-        const sourceString = 'This string-should be,converted.to camel-case'; // Expected Output: thisStringShouldBeConvertedToCameCase
+        /*
+            Task:
+                Define a variable of string type - 'This@string-should#be,converted.to<camel-case>'
+                It should convert the string to a camelCase - thisStringShouldBeConvertedToCamelCase
+        */
+        const sourceString = 'This@string-should#be,converted.to<camel-case>'; // Expected Output: thisStringShouldBeConvertedToCameCase
         const convertToCamelCase = (inputString) => {
-            const splitOperator = [' ', '-', '.', ','];
+            const splitOperator = [' ', '-', '.', ',', '@', '#', '<', '>'];
             let computedString = '';
             splitOperator.forEach((operator, index) => {
                 computedString = index == 0 ? sourceString : computedString;
@@ -33,6 +38,11 @@ describe('String exercies', () => {
     });
 
     it('should convert a string into an array of individual alphabets', () => {
+        /*
+           Task:
+               Define a variable of string type - 'Lorem ipsum dolor sit amet'
+               The output should be an array of individual characters - ['L', 'o', 'r', 'e', 'm', 'i', 'p', 's', 'u', 'm', 'd', 'o', 'l', 'o', 'r', 's', 'i', 't', 'a', 'm', 'e', 't'];
+       */
         const sourceString = 'Lorem ipsum dolor sit amet'; // Expected Output: ['L', 'o', 'r', 'e', 'm', 'i', 'p', 's', 'u', 'm', 'd', 'o', 'l', 'o', 'r', 's', 'i', 't', 'a', 'm', 'e', 't']
         const targetString = ['L', 'o', 'r', 'e', 'm', 'i', 'p', 's', 'u', 'm', 'd', 'o', 'l', 'o', 'r', 's', 'i', 't', 'a', 'm', 'e', 't'];
         let computedString = [];
@@ -50,13 +60,23 @@ describe('String exercies', () => {
     });
 
     it('should replace all the occurences in a string, in a case insensitive format', () => {
+        /*
+            Task:
+                Define a variable of string type - 'Lorem ipsum dolor sit amet lorem Brute lorem dissentiunt ut sea Lorem harum forensibus lorem necessitatibus'
+                Replace all 'lorem' words (case insensitive) with 'hello'
+        */
         const sourceString = 'Lorem ipsum dolor sit amet lorem Brute lorem dissentiunt ut sea Lorem harum forensibus lorem necessitatibus';
-        const targetString = 'test ipsum dolor sit amet test Brute test dissentiunt ut sea test harum forensibus test necessitatibus';
-        const computedString = sourceString.replace(/lorem/gi, 'test');
+        const targetString = 'hello ipsum dolor sit amet hello Brute hello dissentiunt ut sea hello harum forensibus hello necessitatibus';
+        const computedString = sourceString.replace(/lorem/gi, 'hello');
         assert.strictEqual(computedString, targetString);
     });
 
     it('should check whether a string is Palindrome or not', () => {
+        /*
+            Task:
+                Define a variable of string type - 'Rotavator'
+                Verify whether it is a Palindrome or not
+        */
         const sourceString = 'Rotavator';
         let computedString;
         const isPalindrome = (inputString) => {
@@ -73,8 +93,17 @@ describe('String exercies', () => {
 
     it('should print out the time taken by an individual to read a paragraph', () => {
         /* 
-        Assuming an individual reads 200 words per minute. Calculate the time required, in reading the given paragraph;
-        Example: If the Input is 'Lorem ipsum', it should print '1 second(s)'
+            Task
+                Assuming an individual reads 200 words per minute. Calculate the time required, in reading the given paragraph;
+                Example: If the Input is 'Lorem ipsum', it should print '1 second(s)'
+
+                1. 
+                    Define a varibale of string type -  `Lorem ipsum dolor sit amet, ex eam dictas melius laboramus, id vel mazim qualisque posidonium. Pri an brute temporibus appellantur, qui error fierent et, et mei homero nostrud. Latine voluptua maluisset pri ex, ea alienum ancillae assueverit pri, ne mea elitr scripserit referrentur. Brute dissentiunt ut sea, quaeque epicurei lobortis qui an. Ut eum wisi illud omnesque, oporteat accusamus mei in. Ne offendit detraxit repudiandae his. Ex stet ceteros noluisse quo, sit at fierent dissentiet.`;
+                    The expected output is '23 second(s)'
+                2. 
+                    Define a varibale of string type - `Lorem ipsum dolor sit amet, ex eam dictas melius laboramus, id vel mazim qualisque posidonium. Pri an brute temporibus appellantur, qui error fierent et, et mei homero nostrud. Latine voluptua maluisset pri ex, ea alienum ancillae assueverit pri, ne mea elitr scripserit referrentur. Brute dissentiunt ut sea, quaeque epicurei lobortis qui an. Ut eum wisi illud omnesque, oporteat accusamus mei in. Ne offendit detraxit repudiandae his. Ex stet ceteros noluisse quo, sit at fierent dissentiet. Lorem ipsum dolor sit amet, ex eam dictas melius laboramus, id vel mazim qualisque posidonium. Pri an brute temporibus appellantur, qui error fierent et, et mei homero nostrud. Latine voluptua maluisset pri ex, ea alienum ancillae assueverit pri, ne mea elitr scripserit referrentur. Brute dissentiunt ut sea, quaeque epicurei lobortis qui an. Ut eum wisi illud omnesque, oporteat accusamus mei in. Ne offendit detraxit repudiandae his. Ex stet ceteros noluisse quo, sit at fierent dissentiet. Lorem ipsum dolor sit amet, ex eam dictas melius laboramus, id vel mazim qualisque posidonium. Pri an brute temporibus appellantur, qui error fierent et, et mei homero nostrud. Latine voluptua maluisset pri ex, ea alienum ancillae assueverit pri, ne mea elitr scripserit referrentur. Brute dissentiunt ut sea, quaeque epicurei lobortis qui an. Ut eum wisi illud omnesque, oporteat accusamus mei in. Ne offendit detraxit repudiandae his. Ex stet ceteros noluisse quo, sit at fierent dissentiet.`
+                    The expected output is '1 min(s)'
+
         */
         const sourceString1 = `Lorem ipsum dolor sit amet, ex eam dictas melius laboramus, id vel mazim qualisque posidonium. Pri an brute temporibus appellantur, qui error fierent et, et mei homero nostrud. Latine voluptua maluisset pri ex, ea alienum ancillae assueverit pri, ne mea elitr scripserit referrentur. Brute dissentiunt ut sea, quaeque epicurei lobortis qui an. Ut eum wisi illud omnesque, oporteat accusamus mei in. Ne offendit detraxit repudiandae his. Ex stet ceteros noluisse quo, sit at fierent dissentiet.`;
         /* Expected Output: 23 seconds */
@@ -101,22 +130,28 @@ describe('String exercies', () => {
 
     it('should convert an input String as per the instructions', () => {
         /*
-            In words that begin with consonant sounds, all letters before the initial vowel are placed at the end of the word sequence. 
-            Then, "ay" is added.
-            When words begin with consonant clusters (multiple consonants that form one sound), the whole consonants before the vowel is added at the end followed by an "ay".
-            In words that begin with vowel sounds, one just adds "ay" to the end.
+            Task
+                In words that begin with consonant sounds, all letters before the initial vowel are placed at the end of the word sequence. 
+                Then, "ay" is added.
+                When words begin with consonant clusters (multiple consonants that form one sound), the whole consonants before the vowel is added at the end followed by an "ay".
+                In words that begin with vowel sounds, one just adds "ay" to the end.
 
-            Example:
-            Input 1: hello
-            Output 1: ellohay (ello + h + ay)
+                Example:
+                Input 1: hello
+                Output 1: ellohay (ello + h + ay)
 
-            Input 2: umbrella
-            Output 2: umbrellaay (umbrella + ay)
+                Input 2: umbrella
+                Output 2: umbrellaay (umbrella + ay)
+                This format is knows as "PIG LATIN".
 
-            This format is knows as "PIG LATIN".
+                1. 
+                    Define a variable of string type - 'supersede'
+                    The output should be 'upersedesay'
+                2. 
+                    Define a variable of string type - 'artic'
+                    The output should be 'articay'
         */
 
-        // Convert any word to Pig Latin, see how to convert here => https://en.wikipedia.org/wiki/Pig_Latin
         const sourceString1 = "supersede";
         const sourceString2 = "artic"
         const pigLatin = word => {
@@ -140,9 +175,13 @@ describe('String exercies', () => {
 
     it('should compute all the permutations of a given string', () => {
         /*
-            Example:
-            Input: '123'
-            Output: '123', '132', '213', '231', '312', '321' 
+            Task
+                Create a string - '0297'
+                Make all the possible permutations of it
+
+                Example:
+                Input: '123'
+                Output: '123', '132', '213', '231', '312', '321' 
         */
 
         const sourceString = '0297';
@@ -172,15 +211,17 @@ describe('String exercies', () => {
 
     it('should check whether two strings are Anagrams', () => {
         /*
-            Anagram - a word, phrase, or name formed by rearranging the letters of another, such as spar, formed from rasp.
-            Example -- 
-            Input 1: Bored, Robed
-            Output 1: true
+            Task
+                Anagram - a word, phrase, or name formed by rearranging the letters of another, such as spar, formed from rasp.
+                Example -- 
+                Input 1: Bored, Robed
+                Output 1: true
 
-            Input 1: Save, Wase
-            Output 1: false
+                Input 1: Save, Wase
+                Output 1: false
+
+                1. Check whether 'triangle' and 'integral' are anagrams or not
         */
-
         const sourceString1 = 'triangle';
         const sourceString2 = 'integral';
 
@@ -200,13 +241,28 @@ describe('String exercies', () => {
         computedArr1 = (sourceString1.split('')).sort(sort);
         computedArr2 = (sourceString2.split('')).sort(sort);
 
-        assert.deepStrictEqual(computedArr1, computedArr2);
+        const areArraysEqual = (arr1, arr2) => {
+            if (arr1.length !== arr2.length)
+                return false;
+            for (var i = arr1.length; i--;) {
+                if (arr1[i] !== arr2[i])
+                    return false;
+            }
+
+            return true;
+        };
+
+        const isAnagram = areArraysEqual(computedArr1, computedArr2);
+
+        assert.strictEqual(isAnagram, true);
     });
 
     it('should sort strings in ascending order, on the basis of their lengths and then alphabetically', () => {
         /*
-            The input is an array of Strings. The output should be a sorted array of Strings in ascedning order on the basis of their lengths.
-            If one or more strings from the list, have the same length, then the sorting should be in alphabetical ascending order.
+            Task
+                Define an array of strings - ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'ex', 'eam', 'dictas', 'melius', 'laboramus']
+                The output should be a sorted array of Strings in ascedning order on the basis of their lengths.
+                If one or more strings from the list, have the same length, then the sorting should be in alphabetical ascending order.
         */
         const sourceStringList = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'ex', 'eam', 'dictas', 'melius', 'laboramus'];
         const targetStringList = ['ex', 'eam', 'sit', 'amet', 'dolor', 'ipsum', 'lorem', 'dictas', 'melius', 'laboramus'];
@@ -245,7 +301,7 @@ describe('String exercies', () => {
         };
 
         const computedStringList = sortStringByLength(sourceStringList);
-        
+
         assert.deepStrictEqual(computedStringList, targetStringList);
     });
 });

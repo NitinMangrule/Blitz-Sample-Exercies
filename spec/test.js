@@ -10,5 +10,7 @@
 // TO RUN individual module
 // import "../modules/FP/solution";
 
+import "../modules/strings/solution";
+
 // TO RUN ALL TESTS
 // import "../modules";
