@@ -10,7 +10,7 @@
 // TO RUN individual module
 // import "../modules/FP/solution";
 
-import "../modules/strings/solution";
+// import "../tasks/Consultants/solution";
 
 // TO RUN ALL TESTS
 // import "../modules";

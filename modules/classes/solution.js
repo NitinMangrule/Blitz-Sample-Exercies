@@ -71,63 +71,64 @@ describe("Class Exercies", () => {
     const computed = classType;
     assert.equal(computed, expectation);
   });
-});
 
-describe("should create a method for a class that all the instances share a common copy", () => {
-  describe("for methods", () => {
-    class UnitTest { }
 
-    it("should have a method that is being shared among all the instances", () => {
-      /*
-        Task
-          Create a class 'TestFactory'
-          Make a reusable method inside it
-          Verify the same
-      */
-      class TestFactory {
-        static makeTest() {
-          return new UnitTest();
+  describe("should create a method for a class that all the instances share a common copy", () => {
+    describe("for methods", () => {
+      class UnitTest { }
+
+      it("should have a method that is being shared among all the instances", () => {
+        /*
+          Task
+            Create a class 'TestFactory'
+            Make a reusable method inside it
+            Verify the same
+        */
+        class TestFactory {
+          static makeTest() {
+            return new UnitTest();
+          }
         }
-      }
-      const computed = TestFactory.makeTest() instanceof UnitTest;
+        const computed = TestFactory.makeTest() instanceof UnitTest;
 
-      assert.strictEqual(computed, true);
-    });
+        assert.strictEqual(computed, true);
+      });
 
-    it("should define a method whose name is dynamic or gets computed at the runtime", () => {
-      /*
-        Task
-          Create a dynamic method having name 'dynamicMethod'
-          Verify the same
-      */
-      const methodName = "dynamicMethod";
-      class TestFactory {
-        static [methodName]() {
-          return new UnitTest();
+      it("should define a method whose name is dynamic or gets computed at the runtime", () => {
+        /*
+          Task
+            Create a dynamic method having name 'dynamicMethod'
+            Verify the same
+        */
+        const methodName = "dynamicMethod";
+        class TestFactory {
+          static [methodName]() {
+            return new UnitTest();
+          }
         }
-      }
-      const computed = TestFactory.dynamicMethod() instanceof UnitTest;
+        const computed = TestFactory.dynamicMethod() instanceof UnitTest;
 
-      assert.strictEqual(computed, true);
+        assert.strictEqual(computed, true);
+      });
     });
   });
-});
 
-describe("should define a couple of classes that inherits each other", () => {
-  it("one class is an instance of other and is an object as well", () => {
-    /*
-      Task
-        Create two class A and B
-        Make sure B inherits from A
-        Verify that B inherits from A as well is an existing object too
-    */
-    class A { }
-    class B extends A { }
+  describe("should define a couple of classes that inherits each other", () => {
+    it("one class is an instance of other and is an object as well", () => {
+      /*
+        Task
+          Create two class A and B
+          Make sure B inherits from A
+          Verify that B inherits from A as well is an existing object too
+      */
+      class A { }
+      class B extends A { }
 
-    const computed1 = ((new B()) instanceof A);
-    const computed2 = ((new B()) instanceof Object);
+      const computed1 = ((new B()) instanceof A);
+      const computed2 = ((new B()) instanceof Object);
 
-    assert.equal(computed1, true);
-    assert.equal(computed2, true);
+      assert.equal(computed1, true);
+      assert.equal(computed2, true);
+    });
   });
 });

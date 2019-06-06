@@ -4,7 +4,7 @@ describe("Arrow functions Exercies", () => {
   it('should define an arrow method that logs whether the input is odd/even and returns the same', () => {
     /*
       Task
-          Create an arrow method to test the condituons both for true and false conditons.
+          Create an arrow method to test the conditions both for true and false conditons.
     */
     const func = (num) => {
       const numType = num % 2 === 0 ? 'even' : 'odd';
@@ -22,7 +22,7 @@ describe("Arrow functions Exercies", () => {
   it('should define an arrow method that logs whether an input is odd or even, without parenthesis', () => {
     /*
       Task
-          Create an arrow method to test the condituons both for true and false conditons.
+          Create an arrow method to test the conditions both for true and false conditons.
     */
     const func = num => {
       const numType = num % 2 === 0 ? 'even' : 'odd';

@@ -2,42 +2,19 @@ const assert = require('assert');
 
 describe('Object exercies', () => {
     it('should create an object as per instructions and delete a property', () => {
-        /*
-            Create an object having properties as 'name', 'experience', 'skills', and 'expectedCTC'.
+       /*
+            Create an object having properties as 'name': 'Lorem Ipusm', 'experience': '8 years', 'skills': ['Javascript', 'HTML', 'CSS', 'Angular', 'React'], 'expectedCTC': '40 lpa'.
             Then delete the field 'expectedCTC'
         */
-        const sourceObj = {
-            'name': 'Lorem Ipusm',
-            'experience': '8 years',
-            'skills': ['Javascript', 'HTML', 'CSS', 'Angular', 'React'],
-            'expectedCTC': '40 lpa'
-        };
         // TODO: Solution or Logic goes here
         assert.strictEqual(isValidKeys, true);
     });
 
     it('should calculate the length of an object', () => {
         /*
-            Create an object having properties as 'name', 'experience', 'skills', and 'expectedCTC'.
-            Then delete the field 'expectedCTC'
+            Create an object having properties as "notifications": null, "profile_use_background_image": true, "statuses_count": 31, "profile_background_color": "C0DEED", "followers_count": 3066, "profile_image_url": "http://a2.twimg.com/profile_images/1285770264/PGP_normal.jpg", "listed_count": 6, "profile_background_image_url": "http://a3.twimg.com/a/1301071706/images/themes/theme1/bg.png", "description": "", "screen_name": "PostGradProblem", "default_profile": true, "verified": false, "time_zone": null, "profile_text_color": "333333".
+            Calculate the length of the object property
         */
-        const sourceObj = {
-            "notifications": null,
-            "profile_use_background_image": true,
-            "statuses_count": 31,
-            "profile_background_color": "C0DEED",
-            "followers_count": 3066,
-            "profile_image_url": "http://a2.twimg.com/profile_images/1285770264/PGP_normal.jpg",
-            "listed_count": 6,
-            "profile_background_image_url": "http://a3.twimg.com/a/1301071706/images/themes/theme1/bg.png",
-            "description": "",
-            "screen_name": "PostGradProblem",
-            "default_profile": true,
-            "verified": false,
-            "time_zone": null,
-            "profile_text_color": "333333"
-        };
-
         // TODO: Solution or Logic goes here
         assert.strictEqual(sourceObjLength, 14);
     });

@@ -4,7 +4,7 @@ describe("Arrow functions Exercies", () => {
   it('should define an arrow method that logs whether the input is odd/even and returns the same', () => {
     /*
      Task
-         Create an arrow method to test the condituons both for true and false conditons.
+         Create an arrow method to test the conditions both for true and false conditons.
    */
     // TODO: Solution or Logic goes here
 
@@ -15,7 +15,7 @@ describe("Arrow functions Exercies", () => {
   it('should define an arrow method that logs whether an input is odd or even, without parenthesis', () => {
     /*
        Task
-           Create an arrow method to test the condituons both for true and false conditons.
+           Create an arrow method to test the conditions both for true and false conditons.
      */
     // TODO: Solution or Logic goes here
 

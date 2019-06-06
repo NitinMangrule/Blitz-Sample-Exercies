@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 describe('Array exercises', () => {
-    it('should check whether an input is sourceArray', () => {
+    it('should check whether an input is an array', () => {
         /*
             Task
                 Create an array 

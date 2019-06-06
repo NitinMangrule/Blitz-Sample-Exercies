@@ -2,7 +2,7 @@ const assert = require('assert');
 const products = require('./products.json');
 
 describe('Funtional Programming Exercies', () => {
-  describe('should transform from the json list', () => {
+  describe('should transform from the json list using functional programming', () => {
     it('the product price gets doubled as a result of inflation', () => {
       /*
         Task
@@ -22,7 +22,7 @@ describe('Funtional Programming Exercies', () => {
     });
   });
 
-  describe('should filter from the json list', () => {
+  describe('should filter from the json list using functional programming', () => {
     it('for return products which has less than 30 in stock', () => {
       let filtered = products.filter(current => current.inStock < 30);
       const computed = filtered.length
@@ -40,7 +40,7 @@ describe('Funtional Programming Exercies', () => {
     });
   });
 
-  describe('should convert the input array without affecting the original through transformation', () => {
+  describe('should convert the input array without affecting the original through transformation using functional programming', () => {
     it('to type `number`', () => {
       /*
         Task

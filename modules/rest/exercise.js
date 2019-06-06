@@ -16,7 +16,7 @@ describe('Rest Exercies', () => {
       assert.deepEqual(computed, expectation);
     });
 
-    it('should return the last two parameters of the funtion without explicitly executing them', () => {
+    it('should return the last two parameters of the function without explicitly executing them', () => {
       /*
         Task
           Make use of parameterized functional programming having three parameters
