@@ -1,5 +1,5 @@
 {
-  "name": "blitztestcases",
+  "name": "sampleexerciess",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,16 +9,7 @@
     "babel-preset-env": "^1.7.0"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register \"./spec/**/*.js\"",
-    "arrow": "mocha --compilers js:babel-core/register \"./modules/arrow/exercise.js\"",
-    "letConst": "mocha --compilers js:babel-core/register \"./modules/let-const/exercise.js\"",
-    "classes": "mocha --compilers js:babel-core/register \"./modules/classes/exercise.js\"",
-    "defaultValues": "mocha --compilers js:babel-core/register \"./modules/default-values/exercise.js\"",
-    "fp": "mocha --compilers js:babel-core/register \"./modules/FP/exercise.js\"",
-    "destructuring": "mocha --compilers js:babel-core/register \"./modules/destructuring/exercise.js\"",
-    "rest": "mocha --compilers js:babel-core/register \"./modules/rest/exercise.js\"",
-    "spread": "mocha --compilers js:babel-core/register \"./modules/spread/exercise.js\"",
-    "templateStrings": "mocha --compilers js:babel-core/register \"./modules/template-strings/exercise.js\""
+    "test": "mocha --compilers js:babel-core/register \"./spec/**/*.js\""
   },
   "babel": {
     "presets": [

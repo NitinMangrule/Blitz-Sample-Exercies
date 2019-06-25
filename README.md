@@ -1,13 +1,13 @@
-## BlitzTestCases
+## Sample Exercies
 
 ## Overview
-1. The repository sets out a series of exercies for a candidate.
-2. The expectation for the candidate is to complete each set of task provided in this repository.
-3. The exercies is either to provide the logic or to fix the error, only.
-4. Each task contains a brief information about what the ask is.
-5. For some tasks, a json list would be required. This json list has been provided and imported. Utilize this to perform the required ask.
-5. Post completion, the candidate should pass on this back to the source.
-6. The team will then evaluate on the basis of candidate's responses.
+1. This is a sample repository to make a candidate familiar with the actual exercies that will be provided in subsequent steps.
+2. The repository sets out a series of sample exercies for a candidate.
+3. The expectation for the candidate is to understand each set of task provided in this repository.
+4. The exercies is either to provide the logic or to fix the error, only.
+5. Each task contains a brief information about what the ask is.
+6. Candidate can go through the 'solution.js' and familiarize with the expecattions.
+7. The evaluation shall be done as per the coding standards of 'solution.js'.
 
 ## Setup
 1.  Run `npm install` / `yarn install` in the terminal
