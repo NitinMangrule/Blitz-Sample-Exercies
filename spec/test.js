@@ -6,4 +6,4 @@
 // TO RUN ALL TESTS
 // import "../modules";
 
-import '../tasks/solution'
+import '../tasks/exercise'

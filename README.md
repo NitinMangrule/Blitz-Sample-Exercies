@@ -14,10 +14,10 @@
 
 ## Start
 1. Go to 
-    a) 'tasks' directory
-    b) Find 'exercies.js' file
-    c) go through the description of each tasks
-    d) start working
+    i. 'tasks' directory
+    ii. Find 'exercies.js' file
+    iii. go through the description of each tasks
+    iv. start working
 
 ## WISH YOU ALL THE BEST!
 
