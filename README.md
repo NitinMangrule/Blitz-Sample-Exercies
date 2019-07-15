@@ -1,4 +1,4 @@
-## Sample Exercies [![Build Status](https://travis-ci.com/shashankdk/Blitz-Sample-Exercies.svg?branch=develop)](https://travis-ci.com/shashankdk/Blitz-Sample-Exercies)
+# Sample Exercies [![Build Status](https://travis-ci.com/shashankdk/Blitz-Sample-Exercies.svg?branch=develop)](https://travis-ci.com/shashankdk/Blitz-Sample-Exercies)
 
 ## Overview
 1. This is a sample repository to make a candidate familiar with the actual exercies that will be provided in subsequent steps.
@@ -13,11 +13,10 @@
 1.  Run `npm install` / `yarn install` in the terminal
 
 ## Start
-1. Go to 
-    i. 'tasks' directory
-    ii. Find 'exercies.js' file
-    iii. go through the description of each tasks
-    iv. start working
+1. Go to 'tasks' directory
+2. Find 'exercies.js' file
+3. Go through the description of each tasks
+4. Start working
 
 ## WISH YOU ALL THE BEST!
 
